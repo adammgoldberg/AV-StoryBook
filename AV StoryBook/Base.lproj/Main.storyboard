@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ekt-AI-bC8">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Story Part View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="StoryPartViewController" id="BYZ-38-t0r" customClass="StoryPartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxt-GF-6hj">
+                                <rect key="frame" x="20" y="466" width="103" height="30"/>
+                                <state key="normal" title="Camera Button"/>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xp3-RS-aK6"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XKQ-yt-4CN">
+                                <rect key="frame" x="28" y="28" width="552" height="392"/>
+                                <color key="backgroundColor" red="1" green="0.687074721" blue="0.1017020528" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LuP-oL-guk" appends="YES" id="GYu-to-fAo"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9H-YX-4BZ">
+                                <rect key="frame" x="443" y="466" width="132" height="30"/>
+                                <state key="normal" title="Microphone Button"/>
+                                <connections>
+                                    <action selector="microphoneButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6N2-6r-0Zj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7977409593" green="1" blue="0.26733999650000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XKQ-yt-4CN" secondAttribute="trailing" constant="20" id="0mh-49-vfA"/>
+                            <constraint firstItem="nxt-GF-6hj" firstAttribute="leading" secondItem="XKQ-yt-4CN" secondAttribute="leading" constant="-8" id="82Z-Od-uKW"/>
+                            <constraint firstItem="d9H-YX-4BZ" firstAttribute="top" secondItem="XKQ-yt-4CN" secondAttribute="bottom" constant="46" id="Q30-xT-HnM"/>
+                            <constraint firstItem="d9H-YX-4BZ" firstAttribute="trailing" secondItem="XKQ-yt-4CN" secondAttribute="trailing" constant="-5" id="Xau-gE-Duz"/>
+                            <constraint firstItem="XKQ-yt-4CN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="28" id="k9G-Wf-Erh"/>
+                            <constraint firstItem="XKQ-yt-4CN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="sPV-ba-10C"/>
+                            <constraint firstItem="XKQ-yt-4CN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-76" id="uRL-2H-TCl"/>
+                            <constraint firstItem="nxt-GF-6hj" firstAttribute="top" secondItem="XKQ-yt-4CN" secondAttribute="bottom" constant="46" id="zuI-58-alK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="micButton" destination="d9H-YX-4BZ" id="hqM-6h-Xr9"/>
+                        <outlet property="storyImage" destination="XKQ-yt-4CN" id="Opp-7B-AbK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LuP-oL-guk">
+                    <connections>
+                        <action selector="tapImage:" destination="BYZ-38-t0r" id="WpH-Lz-mvR"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="37" y="258"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="VSc-Om-EkL">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="ekt-AI-bC8" customClass="PageViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sik-5b-YBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="307"/>
+        </scene>
+    </scenes>
+</document>
